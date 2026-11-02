@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Research Funding & Innovation Intelligence Platform",
+  title: "Nexora — Research Funding & Innovation Intelligence Platform",
   description: "AI-powered intelligence platform connecting research, intellectual property, grants, and commercialization pathways.",
 };
 

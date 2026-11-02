@@ -49,10 +49,10 @@ export default function HomePage() {
             </div>
             <div>
               <span className="font-bold text-base tracking-tight text-white block">
-                Research Intel
+                Nexora
               </span>
               <span className="text-[10px] text-slate-400 -mt-1 block">
-                Funding & Innovation Intelligence
+                Research & Innovation Intelligence
               </span>
             </div>
           </div>

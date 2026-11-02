@@ -1,7 +1,7 @@
 # brain.md
 
 ## Project
-- Name: Research Funding & Innovation Intelligence Platform
+- Name: Nexora — Research Funding & Innovation Intelligence Platform
 - Purpose (one line): Enterprise intelligence platform connecting research, intellectual property, grants, patent landscaping, and commercialization pathways.
 - Live URL: Local development (`http://localhost:3000` / `http://localhost:8000`)
 - Stack/versions: Next.js 14.2.4, TypeScript 5.4.5, Tailwind CSS 3.4.4, FastAPI 0.111.0, SQLAlchemy 2.0.31, PostgreSQL (asyncpg), SQLite (aiosqlite for tests), Docker Compose
@@ -73,6 +73,12 @@
 - None identified.
 
 ## Change Log (newest first)
+### 2026-11-02 — Nexora Brand Identity Adoption
+- What changed: Official platform naming designated as **Nexora** (*Nexora — Research Funding & Innovation Intelligence Platform*); updated frontend metadata and titles (`layout.tsx`, `page.tsx`, `(dashboard)/layout.tsx`, `(auth)/login/page.tsx`); updated backend `PROJECT_NAME` across `backend/app/core/config.py` and `render.yaml`.
+- Files touched: `frontend/src/app/layout.tsx`, `frontend/src/app/page.tsx`, `frontend/src/app/(dashboard)/layout.tsx`, `frontend/src/app/(auth)/login/page.tsx`, `backend/app/core/config.py`, `render.yaml`, `brain.md`
+- Decisions / gotchas: Selected brand name **Nexora** combining *Nexus* (connection hub of research, capital, and IP) with *Aurora* (dawn of technological discovery).
+- Open items: Configure custom subdomain `nexora.jyotirmayabehera.com` on Vercel.
+
 ### 2026-11-02 — Cloud Deployment Readiness (Vercel & Render)
 - What changed: Added `render.yaml` Blueprint specification for 1-click Render deployment of PostgreSQL and FastAPI backend; resolved Render schema validation issue `databases[0].user not a valid DB user name` by removing reserved `user: postgres`; separated build command (`pip install -r requirements.txt`) from database migrations by creating `backend/start.sh` so Alembic runs at runtime with full database connectivity; enabled automated zero-touch admin provisioning and demo data seeding on startup via environment variables (`ADMIN_EMAIL`, `ADMIN_PASSWORD`, `SEED_DEMO_DATA`), eliminating the need for paid Render Web Shell; pinned Python runtime to `3.11.9` via `backend/.python-version` and `render.yaml`; updated `backend/app/core/config.py` with automatic `DATABASE_URL` normalization for Render/Cloud PostgreSQL connection strings (`postgres://` / `postgresql://` -> `postgresql+asyncpg://` and `sslmode=` -> `ssl=`); added automatic CORS regex matching for Vercel domains (`r"https://.*\.vercel\.app"`) in `backend/app/main.py`; updated repository URLs in `README.md` to `jyotirmaya2004/Research-Funding-Innovation-Intelligence-Platform`; verified all 221 backend tests pass.
 - Files touched: `render.yaml`, `backend/start.sh`, `backend/.python-version`, `README.md`, `backend/app/core/config.py`, `backend/app/main.py`, `brain.md`

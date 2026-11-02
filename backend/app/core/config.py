@@ -5,7 +5,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    PROJECT_NAME: str = "Research Funding & Innovation Intelligence Platform"
+    PROJECT_NAME: str = "Nexora - Research Funding & Innovation Intelligence Platform"
     ENVIRONMENT: str = "development"
     API_V1_STR: str = "/api/v1"
     

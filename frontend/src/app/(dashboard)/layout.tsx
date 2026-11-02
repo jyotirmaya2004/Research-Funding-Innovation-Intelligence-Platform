@@ -89,10 +89,10 @@ export default function DashboardLayout({
             </div>
             <div>
               <span className="font-bold text-sm tracking-tight text-white block">
-                Research Intel
+                Nexora
               </span>
               <span className="text-[10px] text-slate-400 -mt-1 block">
-                Intelligence Platform
+                Research & Innovation
               </span>
             </div>
           </div>

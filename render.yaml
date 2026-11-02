@@ -12,7 +12,7 @@ services:
       - key: ENVIRONMENT
         value: production
       - key: PROJECT_NAME
-        value: "Research Funding & Innovation Intelligence Platform"
+        value: "Nexora - Research Funding & Innovation Intelligence Platform"
       - key: API_V1_STR
         value: "/api/v1"
       - key: DATABASE_URL

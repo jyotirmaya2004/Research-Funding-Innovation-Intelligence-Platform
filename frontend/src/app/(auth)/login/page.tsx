@@ -49,7 +49,7 @@ export default function LoginPage() {
             <Sparkles className="w-6 h-6 text-white" />
           </div>
           <h2 className="text-2xl font-bold text-white tracking-tight">
-            Sign in to Research Intel
+            Sign in to Nexora
           </h2>
           <p className="text-xs text-slate-400">
             Enter your credentials to access funding and innovation dashboards
