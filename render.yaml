@@ -29,6 +29,12 @@ services:
         value: "7"
       - key: CORS_ORIGINS
         value: '["https://*.vercel.app"]'
+      - key: ADMIN_EMAIL
+        value: "admin@platform.edu"
+      - key: ADMIN_PASSWORD
+        value: "AdminPassword123!"
+      - key: SEED_DEMO_DATA
+        value: "true"
 
 databases:
   - name: research-intel-db

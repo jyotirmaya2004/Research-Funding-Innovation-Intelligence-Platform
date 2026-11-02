@@ -14,5 +14,11 @@ if [ -n "$ADMIN_EMAIL" ] && [ -n "$ADMIN_PASSWORD" ]; then
         --name "${ADMIN_NAME:-Platform Administrator}" || true
 fi
 
-echo "[*] Step 3: Starting Uvicorn server on port ${PORT:-8000}..."
+# Optional: Auto-seed demo scientific records and publications
+if [ "$SEED_DEMO_DATA" = "true" ]; then
+    echo "[*] Step 3: Seeding sample scientific records and publications..."
+    python scripts/seed_demo_data.py || true
+fi
+
+echo "[*] Step 4: Starting Uvicorn server on port ${PORT:-8000}..."
 exec uvicorn app.main:app --host 0.0.0.0 --port "${PORT:-8000}"
