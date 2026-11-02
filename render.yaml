@@ -32,4 +32,3 @@ databases:
   - name: research-intel-db
     plan: free
     databaseName: research_intel_db
-    user: postgres

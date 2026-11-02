@@ -74,10 +74,10 @@
 
 ## Change Log (newest first)
 ### 2026-11-02 — Cloud Deployment Readiness (Vercel & Render)
-- What changed: Added `render.yaml` Blueprint specification for 1-click Render deployment of PostgreSQL and FastAPI backend; updated `backend/app/core/config.py` with automatic `DATABASE_URL` normalization for Render/Cloud PostgreSQL connection strings (`postgres://` / `postgresql://` -> `postgresql+asyncpg://` and `sslmode=` -> `ssl=`); added automatic CORS regex matching for Vercel domains (`r"https://.*\.vercel\.app"`) in `backend/app/main.py`; verified all 221 backend tests pass.
-- Files touched: `render.yaml`, `backend/app/core/config.py`, `backend/app/main.py`, `brain.md`
-- Decisions / gotchas: Render provides `postgres://` or `postgresql://` with `sslmode=require` by default, which throws errors in `asyncpg` unless converted to `postgresql+asyncpg://` with `ssl=require`.
-- Open items: Deploy backend on Render, then configure Vercel with Render backend URL.
+- What changed: Added `render.yaml` Blueprint specification for 1-click Render deployment of PostgreSQL and FastAPI backend; resolved Render schema validation issue `databases[0].user not a valid DB user name` by removing reserved `user: postgres` so Render assigns an auto-generated secure username; updated `backend/app/core/config.py` with automatic `DATABASE_URL` normalization for Render/Cloud PostgreSQL connection strings (`postgres://` / `postgresql://` -> `postgresql+asyncpg://` and `sslmode=` -> `ssl=`); added automatic CORS regex matching for Vercel domains (`r"https://.*\.vercel\.app"`) in `backend/app/main.py`; updated repository URLs in `README.md` to `jyotirmaya2004/Research-Funding-Innovation-Intelligence-Platform`; verified all 221 backend tests pass.
+- Files touched: `render.yaml`, `README.md`, `backend/app/core/config.py`, `backend/app/main.py`, `brain.md`
+- Decisions / gotchas: Render provides `postgres://` or `postgresql://` with `sslmode=require` by default, which throws errors in `asyncpg` unless converted to `postgresql+asyncpg://` with `ssl=require`. Render also forbids `user: postgres` as a custom database username.
+- Open items: Push changes to GitHub and apply Render Blueprint.
 
 ### 2026-11-02 — Full Project Verification, Dependency Installation & Live Run
 - What changed: Created `.env` with secure secret and `frontend/.env.local`; created Python virtual environment (`backend/.venv`) and installed all backend requirements; installed all frontend npm dependencies; resolved missing test mock property in `frontend/src/lib/paper_recommendations_and_gaps.test.ts` and made `citation_count?: number` optional in `frontend/src/types/publication.ts`; ran Alembic migrations (`alembic upgrade head`); provisioned administrative user via `create_admin.py`; seeded demo data into PostgreSQL via `seed_demo_data.py`; verified both backend FastAPI server and Next.js frontend dev & production builds.

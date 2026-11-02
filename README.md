@@ -1,8 +1,8 @@
 # Research Funding & Innovation Intelligence Platform
 
 > **Infosys Springboard Virtual Internship 7.0 — Final Project Documentation**  
-> **Repository:** [https://github.com/adityabobade7900/Research-Funding-Innovation-Intelligence-Platform](https://github.com/adityabobade7900/Research-Funding-Innovation-Intelligence-Platform)  
-> **Development Branch:** `feature/aditya-ai-ml`  
+> **Repository:** [https://github.com/jyotirmaya2004/Research-Funding-Innovation-Intelligence-Platform](https://github.com/jyotirmaya2004/Research-Funding-Innovation-Intelligence-Platform)  
+> **Development Branch:** `main`  
 > **Functional Scope:** Modules M1–M11 (Fully Implemented & Verified)
 
 ---
@@ -785,7 +785,7 @@ Follow these commands to configure the platform locally on Windows:
 
 ```powershell
 # 1. Clone the repository
-git clone https://github.com/adityabobade7900/Research-Funding-Innovation-Intelligence-Platform.git
+git clone https://github.com/jyotirmaya2004/Research-Funding-Innovation-Intelligence-Platform.git
 cd Research-Funding-Innovation-Intelligence-Platform
 
 # 2. Configure the environment file
@@ -1151,7 +1151,7 @@ The **Research Funding & Innovation Intelligence Platform** delivers a full-stac
 ### Project Attribution
 - **Program:** Infosys Springboard Virtual Internship 7.0
 - **Project Domain:** Artificial Intelligence, Machine Learning, Full-Stack Enterprise Systems
-- **Repository:** `adityabobade7900/Research-Funding-Innovation-Intelligence-Platform`
+- **Repository:** `jyotirmaya2004/Research-Funding-Innovation-Intelligence-Platform`
 
 ### Data Sources & Open-Source Acknowledgments
 We acknowledge the open scientific registries and libraries that support this platform:
