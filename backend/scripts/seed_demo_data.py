@@ -26,7 +26,7 @@ from app.services.providers.mock_provider import SAMPLE_PUBLICATIONS
 
 
 async def seed_publications(db_url: str = None):
-    target_url = db_url or os.getenv("DATABASE_URL") or "sqlite+aiosqlite:///research_intel.db"
+    target_url = db_url or os.getenv("DATABASE_URL") or getattr(settings, "DATABASE_URL", None) or "sqlite+aiosqlite:///research_intel.db"
     # If settings.DATABASE_URL is postgres and localhost is refused, try sqlite
     print(f"[*] Connecting to database: {target_url}")
     

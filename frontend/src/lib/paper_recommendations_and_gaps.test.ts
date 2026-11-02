@@ -29,7 +29,8 @@ describe("Module 3: Paper Recommendations & Research Gap Discovery Contracts & T
             "Matches profile keyword: quantum error correction (+30.0 pts)",
             "Matches technical area: Neutral Atoms (+15.0 pts)"
           ],
-          doi: "10.1038/s41534-024-00100-x"
+          doi: "10.1038/s41534-024-00100-x",
+          citation_count: 142
         },
         {
           publication_id: 3,
@@ -42,7 +43,8 @@ describe("Module 3: Paper Recommendations & Research Gap Discovery Contracts & T
             "Matches research domain: Quantum Technologies (+40.0 pts)",
             "Matches profile keyword: optical tweezers (+15.0 pts)"
           ],
-          doi: undefined
+          doi: undefined,
+          citation_count: 38
         }
       ]
     };

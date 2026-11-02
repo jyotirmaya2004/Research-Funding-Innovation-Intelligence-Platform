@@ -86,7 +86,7 @@ export interface PublicationRecommendationItem {
   year?: number;
   doi?: string;
   primary_domain?: string;
-  citation_count: number;
+  citation_count?: number;
   relevance_score: number;
   reasons: string[];
 }

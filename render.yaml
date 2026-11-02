@@ -1,0 +1,35 @@
+services:
+  - type: web
+    name: research-intel-backend
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt && alembic upgrade head
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: PROJECT_NAME
+        value: "Research Funding & Innovation Intelligence Platform"
+      - key: API_V1_STR
+        value: "/api/v1"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: research-intel-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_ALGORITHM
+        value: HS256
+      - key: ACCESS_TOKEN_EXPIRE_MINUTES
+        value: "60"
+      - key: REFRESH_TOKEN_EXPIRE_DAYS
+        value: "7"
+      - key: CORS_ORIGINS
+        value: '["https://*.vercel.app"]'
+
+databases:
+  - name: research-intel-db
+    plan: free
+    databaseName: research_intel_db
+    user: postgres
