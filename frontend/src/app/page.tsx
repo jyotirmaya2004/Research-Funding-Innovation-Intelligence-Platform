@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Sparkles, ArrowRight, Shield, Award, Cpu, Search, Database, Layers } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { CtaSection } from "@/components/CtaSection";
 
 export default function HomePage() {
   const roles = [
@@ -183,6 +184,9 @@ export default function HomePage() {
             })}
           </div>
         </div>
+
+        {/* Call To Action Section */}
+        <CtaSection />
       </main>
 
       {/* Footer */}

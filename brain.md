@@ -73,6 +73,12 @@
 - None identified.
 
 ## Change Log (newest first)
+### 2026-11-02 — High-Impact Call-To-Action (CTA) Section Implementation
+- What changed: Created standalone [CtaSection.tsx](file:///home/jyotirmaya/project/Research-Funding-Innovation-Intelligence-Platform/frontend/src/components/CtaSection.tsx) matching exact specifications: centered vertical stack, restrained-width supporting copy, large multi-line primary heading, and non-wrapping dual pill-shaped buttons with 16px gap (`Get Started` primary and `Sign In` secondary outline); embedded into landing page ([frontend/src/app/page.tsx](file:///home/jyotirmaya/project/Research-Funding-Innovation-Intelligence-Platform/frontend/src/app/page.tsx)); verified TypeScript compilation and Next.js static build (18/18 routes passed).
+- Files touched: `frontend/src/components/CtaSection.tsx`, `frontend/src/app/page.tsx`, `brain.md`
+- Decisions / gotchas: Used `flex-nowrap` on the button row with equal `h-12` heights and `rounded-full` pill styling to ensure balanced alignment across all viewports.
+- Open items: Commit and push changes to GitHub.
+
 ### 2026-11-02 — Nexora Brand Identity Adoption
 - What changed: Official platform naming designated as **Nexora** (*Nexora — Research Funding & Innovation Intelligence Platform*); updated frontend metadata and titles (`layout.tsx`, `page.tsx`, `(dashboard)/layout.tsx`, `(auth)/login/page.tsx`); updated backend `PROJECT_NAME` across `backend/app/core/config.py` and `render.yaml`.
 - Files touched: `frontend/src/app/layout.tsx`, `frontend/src/app/page.tsx`, `frontend/src/app/(dashboard)/layout.tsx`, `frontend/src/app/(auth)/login/page.tsx`, `backend/app/core/config.py`, `render.yaml`, `brain.md`
